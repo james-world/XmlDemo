@@ -1,0 +1,18 @@
+[ req ]
+distinguished_name = req_distinguished_name
+x509_extensions = user_crt
+
+[ req_distinguished_name ]
+commonName = localhost
+commonName_max = 64
+
+[ user_crt ]
+nsCertType = client, server, email
+nsComment = "OpenSSL Generated Certificate"
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid,issuer
+
+[ v3_req ]
+basicConstraints = CA:FALSE
+keyusage = nonRepudiation,digitalSignature,keyEncipherment,dataEncipherment
+extendedKeyUsage = serverAuth,codeSigning,clientAuth,emailProtection
